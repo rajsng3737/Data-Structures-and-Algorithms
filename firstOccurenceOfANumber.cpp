@@ -18,8 +18,8 @@ int search(int ar[],int low,int high,int ele){
         return (low+high)/2;
 }
 int main(void){
-    int ar[] = {10};
-    int index = search(ar,0,0,20);
+    int ar[] = {10,20,20,30,40,50,60};
+    int index = search(ar,0,6,20);
     int i;
     for(i = index-1; i>=0; i--){
         if(ar[i] != ar[index] )
