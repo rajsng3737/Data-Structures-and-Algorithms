@@ -14,7 +14,7 @@ int binarySearch(int ar[],int start,int end,int ele){
         return binarySearch(ar,mid+1,end,ele);
 }
 
-// This function iterates in O(logn) to the block of array where Number could be found
+// This function iterates in O(log(index of element)) to the block of array where Number could be found
 int infiniteSearch(int ar[],int n,int ele){
     int i;
     if(ar[0] == ele)
