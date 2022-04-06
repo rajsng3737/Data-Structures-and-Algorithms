@@ -1,24 +1,23 @@
 #include<iostream>
 using namespace std;
-int search(int ar[],int low,int high,int ele){
-    if(ele < ar[low] || ele > ar[high])
-        return -1;
-    if(low+1 == high){
+int BinarySearch(int *ar,int low,int high,int ele){
+    if(low == high){
         if(ar[low] == ele)
             return low;
-        if(ar[high] == ele)
-            return high;
         return -1;
     }
-    if(ar[(low+high)/2] < ele)
-        return search(ar,(low+high)/2,high,ele);
-    else if(ar[(low+high)/2] > ele)
-        return search(ar,low,(low+high)/2,ele);
+    else{
+        int mid = (low+high)/2;
+    if(ar[mid] == ele )
+        return mid;
+    else if (ar[mid] > ele)
+        return BinarySearch(ar,low,mid-1,ele);
     else
-        return (low+high)/2;
+        return BinarySearch(ar,mid+1,high,ele);
+    }
 }
 int main(void){
     int ar[] = {10,20,30,40,50,60};
-    cout<<search(ar,0,5,60);
+    cout<<BinarySearch(ar,1,1,40);
     return 0;
 }
