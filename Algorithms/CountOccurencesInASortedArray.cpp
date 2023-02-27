@@ -19,7 +19,7 @@ int search(int ar[],int low,int high,int ele){
 }
 int main(void){
     int ar[] = {10,20,30,40,50,50,70};
-    int index = search(ar,0,6,50);
+    int index = search(ar,0,sizeof(ar)/sizeof(ar[0]),50);
     int count = 0; 
     //checking in the left of found element
     for(int i = index;i>=0;i--){            //started from index as count is initialized with 0

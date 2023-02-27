@@ -18,6 +18,6 @@ int BinarySearch(int *ar,int low,int high,int ele){
 }
 int main(void){
     int ar[] = {10,20,30,40,50,60};
-    cout<<BinarySearch(ar,1,1,40);
+    cout<<BinarySearch(ar,0,sizeof(ar)/sizeof(ar[0]),40);
     return 0;
 }
